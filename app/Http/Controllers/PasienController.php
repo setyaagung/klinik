@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Pasien;
 use Illuminate\Http\Request;
 
 class PasienController extends Controller
@@ -13,7 +14,8 @@ class PasienController extends Controller
      */
     public function index()
     {
-        //
+        $pasiens = Pasien::all();
+        return view('backend.pasien.index', compact('pasiens'));
     }
 
     /**
@@ -23,7 +25,7 @@ class PasienController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.pasien.create');
     }
 
     /**
@@ -34,7 +36,19 @@ class PasienController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $message = [
+            'no_ktp.unique' => 'Maaf, No KTP ini sudah digunakan pasien lain'
+        ];
+        $request->validate([
+            'nama_pasien' => 'required|string|max:255',
+            'no_ktp' => 'required|string|max:20|unique:pasiens',
+            'jenis_kelamin' => 'required',
+            'tanggal_lahir' => 'required',
+            'alamat' => 'required',
+        ], $message);
+        $data = $request->all();
+        Pasien::create($data);
+        return redirect()->route('pasien.index')->with('create', 'Data pasien berhasil ditambahkan');
     }
 
     /**
@@ -56,7 +70,8 @@ class PasienController extends Controller
      */
     public function edit($id)
     {
-        //
+        $pasien = Pasien::findOrFail($id);
+        return view('backend.pasien.edit', compact('pasien'));
     }
 
     /**
@@ -68,7 +83,20 @@ class PasienController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $pasien = Pasien::findOrFail($id);
+        $message = [
+            'no_ktp.unique' => 'Maaf, No KTP ini sudah digunakan pasien lain'
+        ];
+        $request->validate([
+            'nama_pasien' => 'required|string|max:255',
+            'no_ktp' => 'required|string|max:20|unique:pasiens,no_ktp,' . $id,
+            'jenis_kelamin' => 'required',
+            'tanggal_lahir' => 'required',
+            'alamat' => 'required',
+        ], $message);
+        $data = $request->all();
+        $pasien->update($data);
+        return redirect()->route('pasien.index')->with('update', 'Data pasien berhasil diperbarui');
     }
 
     /**
@@ -79,6 +107,8 @@ class PasienController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $pasien = Pasien::findOrFail($id);
+        $pasien->delete();
+        return redirect()->route('pasien.index')->with('delete', 'Data pasien berhasil dihapus');
     }
 }
