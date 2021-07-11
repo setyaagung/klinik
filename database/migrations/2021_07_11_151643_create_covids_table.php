@@ -23,7 +23,7 @@ class CreateCovidsTable extends Migration
             $table->string('hasil');
             $table->string('rujukan');
             $table->string('satuan');
-            $table->string('qrcode');
+            $table->text('qrcode');
             $table->timestamps();
         });
     }
