@@ -223,10 +223,10 @@
                     <h3>links</h3>
                     <a href="#">home</a>
                     <a href="#">about</a>
-                    <a href="#">facility</a>
+                    <a href="#">fasilitas</a>
                     <a href="#">review</a>
+                    <a href="#">news</a>
                     <a href="#">contact</a>
-                    <a href="#">post</a>
                 </div>
                 <div class="col-md-4 text-center" data-aos="fade-left">
                     <h3>contact</h3>
