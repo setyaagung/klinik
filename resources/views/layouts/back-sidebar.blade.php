@@ -53,6 +53,12 @@
                     </ul>
                 </li>
                 <li class="nav-item">
+                    <a href="{{ route('covid.index')}}" class="nav-link {{ (request()->segment(1) == 'covid') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-file-alt"></i>
+                        <p>Pemeriksaan Covid</p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="{{ route('user.index')}}" class="nav-link {{ (request()->segment(1) == 'user') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-user"></i>
                         <p>Kelola Pengguna</p>

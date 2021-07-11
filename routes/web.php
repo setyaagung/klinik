@@ -25,8 +25,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
     //dokter
     Route::resource('doctor', 'DoctorController');
-    //dokter
+    //pasien
     Route::resource('pasien', 'PasienController');
+    //pemeriksaan covid
+    Route::resource('covid', 'CovidController');
     //user
     Route::resource('user', 'UserController');
     Route::get('/update-status/{id}', 'UserController@update_status');
