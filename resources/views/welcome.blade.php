@@ -52,7 +52,7 @@
         <div class="container">
             <div class="row align-items-center text-center text-md-left">
                 <div class="col-md-6 pr-md-5" data-aos="zoom-in">
-                    <img src="{{ asset('images/doctors-bro.svg')}}" width="100%" alt="">
+                    <img src="{{ asset('images/Doctors-bro.svg')}}" width="100%" alt="">
                 </div>
                 <div class="col-md-6 pr-md-5 content" data-aos="fade-left">
                     <h1><span>stay</span> safe, <span>stay</span> healhty.</h1>
@@ -83,7 +83,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 d-none d-md-block" data-aos="fade-left">
-                    <img src="{{ asset('images/medicine-bro.svg')}}" width="100%" alt="">
+                    <img src="{{ asset('images/Medicine-bro.svg')}}" width="100%" alt="">
                 </div>
             </div>
         </div>
