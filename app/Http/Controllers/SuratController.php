@@ -11,6 +11,6 @@ class SuratController extends Controller
     {
         $cv = Covid::findOrFail($id);
         $qrcode = $covid->qrcode;
-        return view('surat-keterangan', compact('covid', 'qrcode'));
+        return view('surat-keterangan', compact('cv', 'qrcode'));
     }
 }
