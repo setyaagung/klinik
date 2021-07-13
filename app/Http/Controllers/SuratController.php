@@ -10,7 +10,7 @@ class SuratController extends Controller
     public function index($id, $qrcode)
     {
         $cv = Covid::findOrFail($id);
-        $qrcode = $covid->qrcode;
+        $qrcode = $cv->qrcode;
         return view('surat-keterangan', compact('cv', 'qrcode'));
     }
 }
