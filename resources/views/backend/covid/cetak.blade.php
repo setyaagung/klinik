@@ -8,7 +8,9 @@
 </head>
 <body>
     @php
-        $url = 'https://sumber-medika.herokuapp.com/surat-keterangan/'.$covid->id.'/code='.$covid->qrcode;
+        $cv = \App\Model\Covid::where('id',$covid->id)->first();
+        $qrcode = $cv->qrcode;
+        $url = 'https://sumber-medika.herokuapp.com/surat-keterangan/'.$cv->id.'/code='.$qrcode;
     @endphp
     <img src="https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl={{$url}}choe=UTF-8">
 </body>
