@@ -67,7 +67,9 @@
                                             <td>{{ $covid->pasien->nama_pasien}}</td>
                                             <td>{{ $covid->pemeriksaan}}</td>
                                             <td>{{ $covid->hasil}}</td>
+
                                             <td>
+                                                <a href="{{ route('covid.cetak',[$covid->id,$covid->qrcode])}}" class="btn btn-success btn-sm" target="_blank"><i class="fas fa-file-pdf"></i> Cetak</a>
                                                 <a href="{{ route('covid.edit',$covid->id)}}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
                                                 <form action="{{ route('covid.destroy', $covid->id)}}" method="POST" class="d-inline">
                                                     @csrf

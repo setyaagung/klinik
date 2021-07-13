@@ -44,7 +44,7 @@
                                     <select name="doctor_id" class="form-control select2 @error('doctor_id') is-invalid @enderror" style="width: 100%">
                                         <option value="">-- Pilih Dokter --</option>
                                         @foreach ($doctors as $doctor)
-                                            <option value="{{ $doctor->id}}">{{ $doctor->nama_dokter}}</option>
+                                            <option value="{{ $doctor->id}}" {{ old('doctor_id') == $doctor->id ? 'selected':''}}>{{ $doctor->nama_dokter}}</option>
                                         @endforeach
                                     </select>
                                     @error('doctor_id')
@@ -58,7 +58,7 @@
                                     <select name="pasien_id" class="form-control select2 @error('pasien_id') is-invalid @enderror" style="width: 100%">
                                         <option value="">-- Pilih Pasien --</option>
                                         @foreach ($pasiens as $pasien)
-                                            <option value="{{ $pasien->id}}">{{ $pasien->nama_pasien}}</option>
+                                            <option value="{{ $pasien->id}}" {{ old('pasien_id') == $pasien->id ? 'selected':''}}>{{ $pasien->nama_pasien}}</option>
                                         @endforeach
                                     </select>
                                     @error('pasien_id')
@@ -90,6 +90,33 @@
                                                 <option value="Positif" {{ old('hasil') == 'Positif' ? 'selected':''}}>Positif</option>
                                             </select>
                                             @error('hasil')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="">Nilai Rujukan</label>
+                                            <select name="rujukan" class="form-control @error('rujukan') is-invalid @enderror">
+                                                <option value="">-- Pilih Nilai Rujukan --</option>
+                                                <option value="Negatif" {{ old('rujukan') == 'Negatif' ? 'selected':''}}>Negatif</option>
+                                                <option value="Positif" {{ old('rujukan') == 'Positif' ? 'selected':''}}>Positif</option>
+                                            </select>
+                                            @error('rujukan')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="">Satuan</label>
+                                            <input type="text" class="form-control @error('satuan') is-invalid @enderror" name="satuan" value="{{ old('satuan')}}">
+                                            <small>*Jika satuan kosong maka inputkan dengan tanda ( - )</small>
+                                            @error('satuan')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>

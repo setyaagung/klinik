@@ -21,6 +21,7 @@ Auth::routes([
 ]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+//frontend surat keterangan
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
     //dokter
@@ -29,6 +30,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('pasien', 'PasienController');
     //pemeriksaan covid
     Route::resource('covid', 'CovidController');
+    Route::get('/surat-keterangan/{id}/code={qrcode}', 'CovidController@cetak')->name('covid.cetak');
     //user
     Route::resource('user', 'UserController');
     Route::get('/update-status/{id}', 'UserController@update_status');
