@@ -18,41 +18,43 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <table class="table table-sm table-borderless" style="font-size: 14px">
-                <tbody>
-                    <tr>
-                        <th>Nama Pasien</th>
-                        <td>:</td>
-                        <td>{{ $cv->pasien->nama_pasien}}</td>
-                        <td style="width: 15%">Dokter Penanggungjawab</td>
-                        <td>:</td>
-                        <td style="width: 30%">{{ $cv->doctor->nama_dokter}}</td>
-                    </tr>
-                    <tr>
-                        <th style="width: 15%">Tanggal Lahir</th>
-                        <td> : </td>
-                        <td style="width: 30%">{{ \Carbon\Carbon::parse($cv->pasien->tanggal_lahir)->isoFormat('D MMMM Y')}}</td>
-                        <td>No. SIP</td>
-                        <td>:</td>
-                        <td>{{ $cv->doctor->no_sip}}</td>
-                    </tr>
-                    <tr>
-                        <th style="width: 15%">No. Sampel</th>
-                        <td> : </td>
-                        <td style="width: 30%">{{ $cv->no_sampel}}</td>
-                    </tr>
-                    <tr>
-                        <th style="width: 15%">Tanggal</th>
-                        <td> : </td>
-                        <td style="width: 30%">{{ \Carbon\Carbon::parse($cv->tanggal)->isoFormat('D MMMM Y')}}</td>
-                    </tr>
-                    <tr>
-                        <th style="width: 15%">Alamat</th>
-                        <td> : </td>
-                        <td style="width: 30%">{{ $cv->pasien->alamat}}</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table class="table table-sm table-borderless" style="font-size: 14px">
+                    <tbody>
+                        <tr>
+                            <th>Nama Pasien</th>
+                            <td>:</td>
+                            <td>{{ $cv->pasien->nama_pasien}}</td>
+                            <td style="width: 15%">Dokter Penanggungjawab</td>
+                            <td>:</td>
+                            <td style="width: 30%">{{ $cv->doctor->nama_dokter}}</td>
+                        </tr>
+                        <tr>
+                            <th style="width: 15%">Tanggal Lahir</th>
+                            <td> : </td>
+                            <td style="width: 30%">{{ \Carbon\Carbon::parse($cv->pasien->tanggal_lahir)->isoFormat('D MMMM Y')}}</td>
+                            <td>No. SIP</td>
+                            <td>:</td>
+                            <td>{{ $cv->doctor->no_sip}}</td>
+                        </tr>
+                        <tr>
+                            <th style="width: 15%">No. Sampel</th>
+                            <td> : </td>
+                            <td style="width: 30%">{{ $cv->no_sampel}}</td>
+                        </tr>
+                        <tr>
+                            <th style="width: 15%">Tanggal</th>
+                            <td> : </td>
+                            <td style="width: 30%">{{ \Carbon\Carbon::parse($cv->tanggal)->isoFormat('D MMMM Y')}}</td>
+                        </tr>
+                        <tr>
+                            <th style="width: 15%">Alamat</th>
+                            <td> : </td>
+                            <td style="width: 30%">{{ $cv->pasien->alamat}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
     <div class="hasil">
