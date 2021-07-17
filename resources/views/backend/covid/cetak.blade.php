@@ -148,7 +148,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td style="margin-top: 90px !important"><u>{{ $covid->doctor->nama_dokter}}</u><br>
+                                <td class="align-bottom"><u>{{ $covid->doctor->nama_dokter}}</u><br>
                                     Penanggungjawab Klinik Pratama 24 Jam<br>Sumber Medika Mranggen</td>
                                 <td>
                                     @php
