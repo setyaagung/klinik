@@ -65,8 +65,6 @@ class CovidController extends Controller
      */
     public function show($id)
     {
-        $covid = Covid::findOrFail($id);
-        return view('backend.covid.cetak', \compact('covid'));
     }
 
     /**
@@ -77,7 +75,10 @@ class CovidController extends Controller
      */
     public function edit($id)
     {
-        //
+        $covid = Covid::findOrFail($id);
+        $doctors = Doctor::orderBy('nama_dokter', 'ASC')->get();
+        $pasiens = Pasien::orderBy('nama_pasien', 'ASC')->get();
+        return view('backend.covid.edit', \compact('covid', 'doctors', 'pasiens'));
     }
 
     /**
@@ -89,7 +90,20 @@ class CovidController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $covid = Covid::findOrFail($id);
+        $request->validate([
+            'doctor_id' => 'required',
+            'pasien_id' => 'required',
+            'no_sampel' => 'required|string|max:255',
+            'tanggal' => 'required',
+            'pemeriksaan' => 'required|string|max:255',
+            'hasil' => 'required|string|max:255',
+            'satuan' => 'required|string|max:255',
+            //'qrcode' => 'required'
+        ]);
+        $data = $request->all();
+        $covid->update($data);
+        return redirect()->route('covid.index')->with('update', 'Data pemeriksaan covid berhasil diperbarui');
     }
 
     /**
