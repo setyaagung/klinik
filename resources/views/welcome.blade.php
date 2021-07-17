@@ -77,7 +77,7 @@
             <div class="row min-vh-100 align-items-center">
                 <div class="col-md-6 content" data-aos="fade-left">
                     <div class="box">
-                        <h3><i class="fas fa-ambulance"></i> ambulance services</h3>
+                        <h3><i class="fas fa-user-md"></i> professional doctor</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, unde?</p>
                     </div>
                     <div class="box">
@@ -103,48 +103,48 @@
             <h1 class="heading"><span>'</span> Fasilitas Kami <span>'</span></h1>
             <div class="box-container">
                 <div class="box" data-aos="zoom-in">
-                    <a href="{{ asset('images/lab.jpg')}}" title="Laboratorium">
-                        <img src="{{ asset('images/lab.jpg')}}" alt="">
+                    <a href="{{ asset('images/lab.jpeg')}}" title="Laboratorium">
+                        <img src="{{ asset('images/lab.jpeg')}}" alt="">
                     </a>
                 </div>
                 <div class="box" data-aos="zoom-in">
-                    <a href="{{ asset('images/lab.jpg')}}" title="Laboratorium">
-                        <img src="{{ asset('images/lab.jpg')}}" alt="">
+                    <a href="{{ asset('images/ruang-periksa.jpeg')}}" title="Ruang Periksa">
+                        <img src="{{ asset('images/ruang-periksa.jpeg')}}" alt="">
                     </a>
                 </div>
                 <div class="box" data-aos="zoom-in">
-                    <a href="{{ asset('images/lab.jpg')}}" title="Laboratorium">
-                        <img src="{{ asset('images/lab.jpg')}}" alt="">
+                    <a href="{{ asset('images/ruang-tunggu.jpeg')}}" title="Ruang Tunggu">
+                        <img src="{{ asset('images/ruang-tunggu.jpeg')}}" alt="">
                     </a>
                 </div>
                 <div class="box" data-aos="zoom-in">
-                    <a href="{{ asset('images/lab.jpg')}}" title="Laboratorium">
-                        <img src="{{ asset('images/lab.jpg')}}" alt="">
+                    <a href="{{ asset('images/checkup.jpeg')}}" title="Check Up">
+                        <img src="{{ asset('images/checkup.jpeg')}}" alt="">
                     </a>
                 </div>
                 <div class="box" data-aos="zoom-in">
-                    <a href="{{ asset('images/lab.jpg')}}" title="Laboratorium">
-                        <img src="{{ asset('images/lab.jpg')}}" alt="">
+                    <a href="{{ asset('images/halaman-depan.jpeg')}}" title="Halaman Depan">
+                        <img src="{{ asset('images/halaman-depan.jpeg')}}" alt="">
                     </a>
                 </div>
                 <div class="box" data-aos="zoom-in">
-                    <a href="{{ asset('images/lab.jpg')}}" title="Laboratorium">
-                        <img src="{{ asset('images/lab.jpg')}}" alt="">
+                    <a href="{{ asset('images/fasilitas.jpeg')}}" title="Fasilitas">
+                        <img src="{{ asset('images/fasilitas.jpeg')}}" alt="">
                     </a>
                 </div>
                 <div class="box" data-aos="zoom-in">
-                    <a href="{{ asset('images/lab.jpg')}}" title="Laboratorium">
-                        <img src="{{ asset('images/lab.jpg')}}" alt="">
+                    <a href="{{ asset('images/konsultasi.jpeg')}}" title="Konsultasi">
+                        <img src="{{ asset('images/konsultasi.jpeg')}}" alt="">
                     </a>
                 </div>
                 <div class="box" data-aos="zoom-in">
-                    <a href="{{ asset('images/lab.jpg')}}" title="Laboratorium">
-                        <img src="{{ asset('images/lab.jpg')}}" alt="">
+                    <a href="{{ asset('images/pendaftaran.jpeg')}}" title="Pendaftaran">
+                        <img src="{{ asset('images/pendaftaran.jpeg')}}" alt="">
                     </a>
                 </div>
                 <div class="box" data-aos="zoom-in">
-                    <a href="{{ asset('images/lab.jpg')}}" title="Laboratorium">
-                        <img src="{{ asset('images/lab.jpg')}}" alt="">
+                    <a href="{{ asset('images/jam-praktek.jpeg')}}" title="Jam Praktek">
+                        <img src="{{ asset('images/jam-praktek.jpeg')}}" alt="">
                     </a>
                 </div>
             </div>
