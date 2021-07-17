@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hasil Pemeriksaan {{ $covid->pasien->nama_pasien}}</title>
+    <title>Hasil Pemeriksaan {{ $cv->pasien->nama_pasien}}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 </head>
 <body>
@@ -23,33 +23,33 @@
                     <tr>
                         <th>Nama Pasien</th>
                         <td>:</td>
-                        <td>{{ $covid->pasien->nama_pasien}}</td>
+                        <td>{{ $cv->pasien->nama_pasien}}</td>
                         <td style="width: 15%">Dokter Penanggungjawab</td>
                         <td>:</td>
-                        <td style="width: 30%">{{ $covid->doctor->nama_dokter}}</td>
+                        <td style="width: 30%">{{ $cv->doctor->nama_dokter}}</td>
                     </tr>
                     <tr>
                         <th style="width: 15%">Tanggal Lahir</th>
                         <td> : </td>
-                        <td style="width: 30%">{{ \Carbon\Carbon::parse($covid->pasien->tanggal_lahir)->isoFormat('D MMMM Y')}}</td>
+                        <td style="width: 30%">{{ \Carbon\Carbon::parse($cv->pasien->tanggal_lahir)->isoFormat('D MMMM Y')}}</td>
                         <td>No. SIP</td>
                         <td>:</td>
-                        <td>{{ $covid->doctor->no_sip}}</td>
+                        <td>{{ $cv->doctor->no_sip}}</td>
                     </tr>
                     <tr>
                         <th style="width: 15%">No. Sampel</th>
                         <td> : </td>
-                        <td style="width: 30%">{{ $covid->no_sampel}}</td>
+                        <td style="width: 30%">{{ $cv->no_sampel}}</td>
                     </tr>
                     <tr>
                         <th style="width: 15%">Tanggal</th>
                         <td> : </td>
-                        <td style="width: 30%">{{ \Carbon\Carbon::parse($covid->tanggal)->isoFormat('D MMMM Y')}}</td>
+                        <td style="width: 30%">{{ \Carbon\Carbon::parse($cv->tanggal)->isoFormat('D MMMM Y')}}</td>
                     </tr>
                     <tr>
                         <th style="width: 15%">Alamat</th>
                         <td> : </td>
-                        <td style="width: 30%">{{ $covid->pasien->alamat}}</td>
+                        <td style="width: 30%">{{ $cv->pasien->alamat}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -69,12 +69,12 @@
                     <td>NILAI RUJUKAN</td>
                     <td>SATUAN</td>
                 </tr>
-                @if ($covid->pemeriksaan == 'COVID RAPID TEST SWAB CORPORATE')
+                @if ($cv->pemeriksaan == 'COVID RAPID TEST SWAB CORPORATE')
                     <tr style="font-size: 13px !important">
                         <td>COVID RAPID TEST SWAB CORPORATE</td>
-                        <td>{{ $covid->hasil}}</td>
-                        <td>{{ $covid->rujukan}}</td>
-                        <td>{{ $covid->satuan}}</td>
+                        <td>{{ $cv->hasil}}</td>
+                        <td>{{ $cv->rujukan}}</td>
+                        <td>{{ $cv->satuan}}</td>
                     </tr>
                     <tr style="font-size: 13px !important">
                         <td>Antigen SARS - Cov - 2</td>
@@ -97,9 +97,9 @@
                     </tr>
                     <tr style="font-size: 13px !important">
                         <td>Antigen SARS - Cov - 2</td>
-                        <td>{{ $covid->hasil}}</td>
-                        <td>{{ $covid->rujukan}}</td>
-                        <td>{{ $covid->satuan}}</td>
+                        <td>{{ $cv->hasil}}</td>
+                        <td>{{ $cv->rujukan}}</td>
+                        <td>{{ $cv->satuan}}</td>
                     </tr>
                     <tr>
                         <td></td>
@@ -148,11 +148,11 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td style="margin-top: 90px !important"><u>{{ $covid->doctor->nama_dokter}}</u><br>
+                                <td style="margin-top: 90px !important"><u>{{ $cv->doctor->nama_dokter}}</u><br>
                                     Penanggungjawab Klinik Pratama 24 Jam<br>Sumber Medika Mranggen</td>
                                 <td>
                                     @php
-                                        $cv = \App\Model\Covid::where('id',$covid->id)->first();
+                                        $cv = \App\Model\Covid::where('id',$cv->id)->first();
                                         $qrcode = $cv->qrcode;
                                         $url = 'https://sumber-medika.herokuapp.com/surat-keterangan/'.$cv->id.'/code='.$qrcode;
                                     @endphp
