@@ -1,61 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@yield('title')</title>
-    <meta name="title" content="Klinik Pratama 24 Jam | Umum, Rapid Test Antigen, Swab Test, Gigi, Laboratorium">
-    <meta name="description" content="Sumber Medika Mranggen | Rapid Test Antigen | Umum | Laboratorium | Periksa Kandungan Kehamilan | Dokter Patologi">
-    <meta name="site_name" content="Klinik Pratama 24 Jam Sumber Medika Mranggen">
+@extends('layouts.app')
 
-    <!-- aos css file cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-
-    <!-- magnific popup css cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
-
-    <!-- bootstrap cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
-
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="{{ asset('css/style.css')}}">
-    <link rel="shortcut icon" href="{{('images/logo.jpeg')}}" type="image/x-icon">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <a href="/" class="logo">
-                <img src="{{ asset('images/logo.jpeg')}}" class="img-fluid" style="width: 80px" alt=""> Sumber Medika</a>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#home">home</a></li>
-                    <li><a href="#about">about us</a></li>
-                    <li><a href="#fasilitas">fasilitas</a></li>
-                    <li><a href="#review">review</a></li>
-                    <li><a href="#news">news</a></li>
-                    <li><a href="#contact">contact</a></li>
-                    @guest
-                        <li><a href="{{ route('login')}}">login</a></li>
-                    @else
-                        <li>
-                            <a href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                            document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                        </li>
-                    @endguest
-                </ul>
-            </nav>
-            <div class="fas fa-bars"></div>
-        </div>
-    </header>
-
+@section('title','KLINIK PRATAMA 24 JAM SUMBER MEDIKA MRANGGEN')
+@section('content')
     <!-- home section -->
     <section class="home" id="home">
         <div class="container">
@@ -64,9 +10,9 @@
                     <img src="{{ asset('images/Doctors-bro.svg')}}" width="100%" alt="">
                 </div>
                 <div class="col-md-6 pr-md-5 content" data-aos="fade-left">
-                    <h1><span>stay</span> safe, <span>stay</span> healhty.</h1>
-                    <h3>caring for you.</h3>
-                    <a href="#"><button class="button">learn more</button></a>
+                    <h1><span>Stay</span> Safe, <span>Stay</span> Healhty.</h1>
+                    <h3>Caring For You.</h3>
+                    <a href="#"><button class="button">Learn More</button></a>
                 </div>
             </div>
         </div>
@@ -79,16 +25,16 @@
             <div class="row min-vh-100 align-items-center">
                 <div class="col-md-6 content" data-aos="fade-left">
                     <div class="box">
-                        <h3><i class="fas fa-user-md"></i> professional doctor</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, unde?</p>
+                        <h3><i class="fas fa-user-md"></i> Professional Doctor</h3>
+                        <p>Kami memiliki dokter yang baik dan sangat profesional dalam penanganan pasien</p>
                     </div>
                     <div class="box">
-                        <h3><i class="fas fa-procedures"></i> emergency rooms</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, unde?</p>
+                        <h3><i class="fas fa-procedures"></i> Emergency Rooms</h3>
+                        <p>Kami memiliki ruang gawat darurat yang dibutuhkan untuk penanganan cepat</p>
                     </div>
                     <div class="box">
-                        <h3><i class="fas fa-stethoscope"></i> free check-ups</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, unde?</p>
+                        <h3><i class="fas fa-stethoscope"></i> Free Check-ups</h3>
+                        <p>Gratis konsultasi dan check-up dalam masalah kesehatan</p>
                     </div>
                 </div>
                 <div class="col-md-6 d-none d-md-block" data-aos="fade-left">
@@ -186,7 +132,7 @@
     <!-- post section starts  -->
     <section class="post" id="news" style="min-height: 100vh">
         <div class="container">
-            <h1 class="heading"><span>'</span> berita terbaru <span>'</span></h1>
+            <h1 class="heading"><span>'</span> Berita Terbaru <span>'</span></h1>
             <div class="box-container">
                 <div class="box" data-aos="fade-right">
                     <img src="{{ asset('images/3.jpg')}}" alt="">
@@ -219,55 +165,4 @@
         </div>
     </section>
     <!-- post section ends -->
-
-    <!-- footer section starts  -->
-    <section class="footer" id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4" data-aos="fade-right">
-                    <a href="#" class="logo">Sumber Medika</a>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur nemo porro quasi minima consequuntur dolorum, quas amet in autem id?</p>
-                </div>
-                <div class="col-md-4 text-center" data-aos="fade-up">
-                    <h3>links</h3>
-                    <a href="#">home</a>
-                    <a href="#">about</a>
-                    <a href="#">fasilitas</a>
-                    <a href="#">review</a>
-                    <a href="#">news</a>
-                    <a href="#">contact</a>
-                </div>
-                <div class="col-md-4 text-center" data-aos="fade-left">
-                    <h3>contact</h3>
-                    <a href="#">facebook</a>
-                    <a href="#">twitter</a>
-                    <a href="#">instagram</a>
-                    <a href="#">github</a>
-                </div>
-            </div>
-        </div>
-        <h1 class="credit text-center mx-auto">created by <span>Sumber Medika</span> | all rights reserved.</h1>
-    </section>
-    <!-- footer section ends -->
-
-
-
-
-    <!-- jquery cdn link  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- magnific popup js link  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-
-    <!-- aos js file cdn link  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
-    <script src="{{ asset('js/main.js')}}"></script>
-    <script>
-        AOS.init({
-            duration:1000,
-            delay:400
-        });
-    </script>
-</body>
-</html>
+@endsection

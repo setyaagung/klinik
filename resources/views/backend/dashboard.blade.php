@@ -21,10 +21,30 @@
                     <!-- small box -->
                     <div class="small-box bg-info">
                         <div class="inner">
-                            <h3>Rp. </h3>
-                            <p>Pemasukkan Bulan Ini</p>
+                            <h3>{{ $dokter}}</h3>
+                            <p>Dokter</p>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="{{ route('doctor.index')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-warning">
+                        <div class="inner">
+                            <h3>{{ $pasien}}</h3>
+                            <p>Pasien</p>
+                        </div>
+                        <a href="{{ route('pasien.index')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-success">
+                        <div class="inner">
+                            <h3>{{ $covid}}</h3>
+                            <p>Pemeriksaan Covid</p>
+                        </div>
+                        <a href="{{ route('covid.index')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>
