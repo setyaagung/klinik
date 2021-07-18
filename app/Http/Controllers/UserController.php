@@ -97,7 +97,6 @@ class UserController extends Controller
             'role_id' => 'required'
         ], $message);
         $data = $request->all();
-        $data['password'] = bcrypt($request->input('password'));
         $user->update($data);
         return redirect()->route('user.index')->with('update', 'Data user berhasil diperbarui');
     }
