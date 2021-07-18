@@ -11,6 +11,9 @@
             .stempel{
                 width: 100% !important;
             }
+            .logo{
+                text-align: center !important
+            }
         }
     </style>
 </head>
@@ -19,7 +22,7 @@
         <div class="header mt-5">
             <div class="row">
                 <div class="col-sm-2 logo">
-                    <img src="{{ asset('images/logo.jpeg')}}" class="img-fluid" style="width: 120px" alt="">
+                    <img src="{{ asset('images/logo.jpeg')}}" class="img-fluid logo" style="width: 120px" alt="">
                 </div>
                 <div class="col-sm-8 text-center">
                     <h4 class="font-weight-bold text-success">KLINIK PRATAMA 24 JAM<br>SUMBER MEDIKA MRANGGEN</h4>
