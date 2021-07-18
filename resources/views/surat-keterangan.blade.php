@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <style type="text/css">
         @media(max-width: 768px){
-            .logo{
-                text-align: center
+            .stempel{
+                width: 100% !important;
             }
         }
     </style>
@@ -152,9 +152,9 @@
             </div>
         </div>
         <div class="mengetahui mt-3" style="font-size: 13px;">
-            <div class="mr-4 ml-4">
+            <div class="container">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-md-12">
                         <table class="table table-sm table-borderless text-center">
                             <tbody>
                                 <tr>
@@ -164,7 +164,9 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="align-bottom"><u>{{ $cv->doctor->nama_dokter}}</u><br>
+                                    <td class="align-bottom">
+                                        <img src="{{ asset('images/stempel.png')}}" class="stempel" style="width: 35%;margin-bottom:20px" alt=""><br>
+                                        <u>{{ $cv->doctor->nama_dokter}}</u><br>
                                         Penanggungjawab Klinik Pratama 24 Jam<br>Sumber Medika Mranggen</td>
                                     <td>
                                         @php

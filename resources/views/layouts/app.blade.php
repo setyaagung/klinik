@@ -30,12 +30,12 @@
                 <img src="{{ asset('images/logo.jpeg')}}" class="img-fluid" style="width: 80px" alt=""> Sumber Medika</a>
             <nav class="nav">
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#fasilitas">Fasilitas</a></li>
-                    <li><a href="#review">Review</a></li>
-                    <li><a href="#news">News</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="/#home">Home</a></li>
+                    <li><a href="/#about">About Us</a></li>
+                    <li><a href="/#fasilitas">Fasilitas</a></li>
+                    <li><a href="/#review">Review</a></li>
+                    <li><a href="/#news">News</a></li>
+                    <li><a href="/#contact">Contact</a></li>
                     @guest
                         <li><a href="{{ route('login')}}">Login</a></li>
                     @else
@@ -68,12 +68,12 @@
                 </div>
                 <div class="col-md-4 text-center" data-aos="fade-up">
                     <h3>Links</h3>
-                    <a href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Fasilitas</a>
-                    <a href="#">Review</a>
-                    <a href="#">News</a>
-                    <a href="#">Contact</a>
+                    <a href="/#home">Home</a>
+                    <a href="/#about">About</a>
+                    <a href="/#fasilitas">Fasilitas</a>
+                    <a href="/#review">Review</a>
+                    <a href="/#news">News</a>
+                    <a href="/#contact">Contact</a>
                 </div>
                 <div class="col-md-4 text-center" data-aos="fade-left">
                     <h3>Contact</h3>

@@ -157,7 +157,9 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="align-bottom"><u>{{ $covid->doctor->nama_dokter}}</u><br>
+                                <td class="align-bottom">
+                                    <img src="{{ asset('images/stempel.png')}}" style="width: 35%;margin-bottom:20px" alt=""><br>
+                                    <u>{{ $covid->doctor->nama_dokter}}</u><br>
                                     Penanggungjawab Klinik Pratama 24 Jam<br>Sumber Medika Mranggen</td>
                                 <td>
                                     @php
