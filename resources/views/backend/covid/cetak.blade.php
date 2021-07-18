@@ -16,14 +16,14 @@
             </div>
             <div class="col-md-8 text-center">
                 <h4 class="font-weight-bold text-success">KLINIK PRATAMA 24 JAM<br>SUMBER MEDIKA MRANGGEN</h4>
-                <p style="font-size: 13px;margin-top: -5px;">
+                <p style="font-size: 13px;margin-top: -10px;">
                     Jl. Kangkung Krajan Raya RT. 02/RW. 01, Desa KangKung, Kecamatan Mranggen<br>
                     Kabupaten Demak, Kode Pos 59567 Telp. (024) 76418330, email:kliniksumbermedika12@yahoo.com
                 </p>
             </div>
             <div class="col-md-2"></div>
         </div>
-        <hr style="border: 1px solid black;margin-top: -78px">
+        <hr style="border: 1px solid black;margin-top: -78px;margin-bottom: -10px">
     </div>
     <div class="row">
         <div class="col-md-12">
@@ -58,7 +58,7 @@
                     <tr>
                         <th style="width: 15%">Alamat</th>
                         <td> : </td>
-                        <td style="width: 30%">{{ $covid->pasien->alamat}}</td>
+                        <td style="width: 30%;text-align: justify;">{{ $covid->pasien->alamat}}</td>
                     </tr>
                 </tbody>
             </table>
