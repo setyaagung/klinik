@@ -35,5 +35,5 @@ Route::middleware(['auth'])->group(function () {
     //user
     Route::resource('user', 'UserController');
     Route::get('/update-status/{id}', 'UserController@update_status');
-    Route::patch('/user/{id}/reset-password', 'UserController@reset_password')->name('user.reset-password');
+    Route::patch('/reset-password/{id}', 'UserController@reset_password')->name('reset-password');
 });

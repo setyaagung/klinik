@@ -19,7 +19,7 @@
                             </h3>
                         </div>
                         <div class="card-body">
-                            <form action="{{ route('user.reset-password',$user->id)}}" method="POST">
+                            <form action="{{ route('reset-password',$user->id)}}" method="POST">
                                 @csrf
                                 @method('PATCH')
                                 <div class="form-group">
