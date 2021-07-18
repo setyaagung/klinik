@@ -133,9 +133,9 @@ class UserController extends Controller
         $request->validate([
             'password' => 'required|string|min:8|confirmed',
         ]);
-        $data = $request->all();
-        $data['password'] = bcrypt($request->input('password'));
-        $user->update($data);
+        //$data = $request->all();
+        $user->password = bcrypt($request->input('password'));
+        $user->save();
         return redirect()->route('user.index')->with('update', 'Password berhasil direset');
     }
 }
