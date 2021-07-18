@@ -9,13 +9,21 @@
 </head>
 <body>
     <div class="container">
-        <div class="header text-center">
-            <h5 class="font-weight-bold text-success">KLINIK PRATAMA 24 JAM<br>SUMBER MEDIKA MRANGGEN</h5>
-            <p style="font-size: 13px;;margin-top: -10px">
-                Jl. Kangkung Krajan Raya RT. 02/RW. 01, Desa KangKung, Kecamatan Mranggen<br>
-                Kabupaten Demak, Kode Pos 59567 Telp. (024) 76418330, email:kliniksumbermedika12@yahoo.com
-            </p>
-            <hr style="border: 1px solid black;margin-top: -10px">
+        <div class="header mt-5">
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="{{ asset('images/logo.jpeg')}}" class="img-fluid" style="width: 120px" alt="">
+                </div>
+                <div class="col-md-8 text-center">
+                    <h4 class="font-weight-bold text-success">KLINIK PRATAMA 24 JAM<br>SUMBER MEDIKA MRANGGEN</h4>
+                    <p style="font-size: 13px;margin-top: -5px;">
+                        Jl. Kangkung Krajan Raya RT. 02/RW. 01, Desa KangKung, Kecamatan Mranggen<br>
+                        Kabupaten Demak, Kode Pos 59567 Telp. (024) 76418330, email:kliniksumbermedika12@yahoo.com
+                    </p>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <hr style="border: 1px solid black;margin-top: -15px">
         </div>
         <div class="row">
             <div class="col-md-12">

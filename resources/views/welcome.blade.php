@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title')</title>
-    <meta name="title" content="Klinik 24 Jam | Umum, Spesialis, Gigi, Anak, Rapid Test Antigen">
-    <meta name="description" content="Sumber Medika Klinik Pratama 24 Jam | Rapid Test Antigen | Periksa Kandungan Kehamilan | Klinik Anak Semarang, Imunisasi, Khitan | Dokter Patologi">
-    <meta name="site_name" content="Klinik Sumber Medika">
+    <meta name="title" content="Klinik Pratama 24 Jam | Umum, Rapid Test Antigen, Swab Test, Gigi, Laboratorium">
+    <meta name="description" content="Sumber Medika Mranggen | Rapid Test Antigen | Umum | Laboratorium | Periksa Kandungan Kehamilan | Dokter Patologi">
+    <meta name="site_name" content="Klinik Pratama 24 Jam Sumber Medika Mranggen">
 
     <!-- aos css file cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
@@ -21,11 +21,13 @@
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="{{ asset('css/style.css')}}">
+    <link rel="shortcut icon" href="{{('images/logo.jpeg')}}" type="image/x-icon">
 </head>
 <body>
     <header>
         <div class="container">
-            <a href="" class="logo">Sumber Medika</a>
+            <a href="/" class="logo">
+                <img src="{{ asset('images/logo.jpeg')}}" class="img-fluid" style="width: 80px" alt=""> Sumber Medika</a>
             <nav class="nav">
                 <ul>
                     <li><a href="#home">home</a></li>
