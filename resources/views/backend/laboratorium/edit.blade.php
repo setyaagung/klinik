@@ -57,6 +57,7 @@
                                     </div>
                                     <hr>
                                     <div class="float-right">
+                                        <a href="{{ route('laboratorium.index')}}" class="btn btn-secondary">Kembali</a>
                                         <button type="submit" class="btn btn-primary">Update</button>
                                     </div>
                                 </div>

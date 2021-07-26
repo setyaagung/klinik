@@ -64,7 +64,8 @@
                                     </div>
                                     <hr>
                                     <div class="float-right">
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <a href="{{ route('laboratorium.index')}}" class="btn btn-secondary">Kembali</a>
+                                        <button type="submit" class="btn btn-primary">Simpan</button>
                                     </div>
                                 </div>
                             </form>
