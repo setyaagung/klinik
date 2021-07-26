@@ -1,6 +1,6 @@
 @extends('layouts.back-main')
 
-@section('title','Tambah Permintaan Laboratorium')
+@section('title','Edit Permintaan Laboratorium')
 
 @section('content')
     <!-- Content Header (Page header) -->
@@ -15,20 +15,13 @@
                     <div class="card card-outline card-primary">
                         <div class="card-header">
                             <h3 class="card-title font-weight-bold">
-                                Tambah Permintaan Laboratorium
+                                Edit Permintaan Laboratorium
                             </h3>
                         </div>
                         <div class="card-body">
-                            <form action="{{ route('laboratorium.store')}}" method="POST">
+                            <form action="{{ route('laboratorium.update',$lab->id_lab)}}" method="POST">
                                 @csrf
-                                @if ($message = Session::get('create'))
-                                    <div class="alert alert-info alert-dismissible fade show" role="alert">
-                                        <strong>Success!</strong> {{$message}}.
-                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                @endif
+                                @method('PATCH')
                                 <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
                                     <li class="nav-item" role="presentation">
                                         <a class="nav-link active" id="form1-tab" data-toggle="tab" href="#form1" role="tab">Data Pasien</a>
@@ -48,23 +41,23 @@
                                 </ul>
                                 <div class="tab-content" id="myTabContent">
                                     <div class="tab-pane fade show active" id="form1" role="tabpanel" aria-labelledby="form1-tab">
-                                        @include('backend.laboratorium.form-create.formulir1')
+                                        @include('backend.laboratorium.form-edit.formulir1')
                                     </div>
                                     <div class="tab-pane fade" id="form2" role="tabpanel" aria-labelledby="form2-tab">
-                                        @include('backend.laboratorium.form-create.formulir2')
+                                        @include('backend.laboratorium.form-edit.formulir2')
                                     </div>
                                     <div class="tab-pane fade" id="form3" role="tabpanel" aria-labelledby="form3-tab">
-                                        @include('backend.laboratorium.form-create.formulir3')
+                                        @include('backend.laboratorium.form-edit.formulir3')
                                     </div>
                                     <div class="tab-pane fade" id="form4" role="tabpanel" aria-labelledby="form4-tab">
-                                        @include('backend.laboratorium.form-create.formulir4')
+                                        @include('backend.laboratorium.form-edit.formulir4')
                                     </div>
                                     <div class="tab-pane fade" id="form5" role="tabpanel" aria-labelledby="form5-tab">
-                                        @include('backend.laboratorium.form-create.formulir5')
+                                        @include('backend.laboratorium.form-edit.formulir5')
                                     </div>
                                     <hr>
                                     <div class="float-right">
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="submit" class="btn btn-primary">Update</button>
                                     </div>
                                 </div>
                             </form>

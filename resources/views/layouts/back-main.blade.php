@@ -23,6 +23,7 @@
         <link rel="stylesheet" href="{{ asset('assets/plugins/summernote/summernote-bs4.min.css')}}">
         <!-- Theme style -->
         <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css')}}">
+        <link rel="shortcut icon" href="{{('images/logo.jpeg')}}" type="image/x-icon">
     </head>
     <body class="hold-transition sidebar-mini layout-fixed">
         <div class="wrapper">
