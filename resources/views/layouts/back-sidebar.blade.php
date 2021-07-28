@@ -65,12 +65,6 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('laboratorium.index')}}" class="nav-link {{ (request()->segment(1) == 'laboratorium') ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-file-archive"></i>
-                        <p>Laboratorium</p>
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a href="{{ route('user.index')}}" class="nav-link {{ (request()->segment(1) == 'user') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-user"></i>
                         <p>Kelola Pengguna</p>

@@ -66,7 +66,7 @@
                                             <td>{{ \Carbon\Carbon::parse($kd->mulai_istirahat)->isoFormat('D MMMM Y')}}</td>
                                             <td>{{ \Carbon\Carbon::parse($kd->selesai_istirahat)->isoFormat('D MMMM Y')}}</td>
                                             <td>
-                                                <a href="{{ route('keterangan-dokter.cetak',$kd->id_keterangan_dokter)}}" class="btn btn-success btn-sm" target="_blank"><i class="fas fa-file-pdf"></i> Cetak</a>
+                                                <a href="{{ route('keterangan-dokter.cetak',[$kd->id_keterangan_dokter,$kd->qrcode])}}" class="btn btn-success btn-sm" target="_blank"><i class="fas fa-file-pdf"></i> Cetak</a>
                                                 <a href="{{ route('keterangan-dokter.edit',$kd->id_keterangan_dokter)}}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
                                                 <form action="{{ route('keterangan-dokter.destroy', $kd->id_keterangan_dokter)}}" method="POST" class="d-inline">
                                                     @csrf

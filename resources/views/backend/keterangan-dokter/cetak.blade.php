@@ -52,10 +52,37 @@
             <br>
             Demikian untuk diketahui adanya.
         </p>
-        <div class="float-right mr-5">
-            <p>Demak, {{ \Carbon\Carbon::parse($kd->tanggal_periksa)->isoFormat('D MMMM Y')}}</p>
-            <img src="{{ asset('images/stempel.png')}}" class="img-fluid" alt="" style="width: 200px">
-            <p class="mt-1">({{ $kd->doctor->nama_dokter}})</p>
+        <div class="mengetahui mt-3" style="font-size: 13px;">
+            <div class="mr-4 ml-4">
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table table-sm table-borderless text-center">
+                            <tbody>
+                                <tr>
+                                    <td>Mengetahui,</td>
+                                    <td>Pindai QR code ini untuk mengunduh hasil anda<br>
+                                        <i>Scan this QR code to download your result</i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class=" align-content-center">
+                                        <img src="{{ asset('images/stempel.png')}}" style="width: 35%;margin-bottom:20px" alt=""><br>
+                                        <u>{{ $kd->doctor->nama_dokter}}</u><br>
+                                    </td>
+                                    <td>
+                                        @php
+                                            $kds = \App\Model\KeteranganDokter::where('id_keterangan_dokter',$kd->id_keterangan_dokter)->first();
+                                            $qrcode = $kds->qrcode;
+                                            $url = 'https://sumber-medika.herokuapp.com/keterangan-dokter/'.$kds->id_keterangan_dokter.'/code='.$qrcode;
+                                        @endphp
+                                        <img src="https://chart.googleapis.com/chart?cht=qr&chs=140x140&chl={{$url}}choe=UTF-8" class="mt-1">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

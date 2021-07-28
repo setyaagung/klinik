@@ -8,7 +8,7 @@ class KeteranganDokter extends Model
 {
     protected $table = 'keterangan_dokter';
     protected $primaryKey = 'id_keterangan_dokter';
-    protected $fillable = ['doctor_id', 'pasien_id', 'pekerjaan', 'tanggal_periksa', 'mulai_istirahat', 'selesai_istirahat'];
+    protected $fillable = ['doctor_id', 'pasien_id', 'pekerjaan', 'qrcode', 'tanggal_periksa', 'mulai_istirahat', 'selesai_istirahat'];
 
     public function doctor()
     {

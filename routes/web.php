@@ -23,6 +23,7 @@ Auth::routes([
 Route::get('/home', 'HomeController@index')->name('home');
 //frontend surat keterangan
 Route::get('/surat-keterangan/{id}/code={qrcode}', 'SuratController@index')->name('surat');
+Route::get('/keterangan-dokter/{id}/code={qrcode}', 'SuratController@surat_dokter')->name('surat_dokter');
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
     //dokter
@@ -34,11 +35,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/surat-keterangan/covid/{id}/code={qrcode}', 'CovidController@cetak')->name('covid.cetak');
     //keterangan dokter
     Route::resource('keterangan-dokter', 'KeteranganDokterController');
-    Route::get('/surat-keterangan-dokter/{id}', 'KeteranganDokterController@cetak')->name('keterangan-dokter.cetak');
-    //lab
-    Route::get('/laboratorium/getpasien', 'LaboratoriumController@getPasien');
-    Route::resource('laboratorium', 'LaboratoriumController');
-    Route::get('/permintaan-laboratorium/{id}', 'LaboratoriumController@cetak')->name('laboratorium.cetak');
+    Route::get('/surat-keterangan-dokter/{id}/code={qrcode}', 'KeteranganDokterController@cetak')->name('keterangan-dokter.cetak');
     //user
     Route::resource('user', 'UserController');
     Route::get('/update-status/{id}', 'UserController@update_status');

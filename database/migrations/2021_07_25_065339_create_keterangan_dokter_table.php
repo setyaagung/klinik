@@ -17,6 +17,7 @@ class CreateKeteranganDokterTable extends Migration
             $table->bigIncrements('id_keterangan_dokter');
             $table->unsignedBigInteger('doctor_id');
             $table->unsignedBigInteger('pasien_id');
+            $table->string('qrcode');
             $table->string('pekerjaan');
             $table->date('tanggal_periksa');
             $table->date('mulai_istirahat');

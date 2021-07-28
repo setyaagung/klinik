@@ -50,6 +50,7 @@ class KeteranganDokterController extends Controller
             'selesai_istirahat' => 'required'
         ]);
         $data = $request->all();
+        $data['qrcode'] = \rand(10000000000, 99999999999);
         KeteranganDokter::create($data);
         return redirect()->route('keterangan-dokter.index')->with('create', 'Data surat keterangan dokter berhasil ditambahkan');
     }
@@ -114,10 +115,11 @@ class KeteranganDokterController extends Controller
         $kd->delete();
         return redirect()->route('keterangan-dokter.index')->with('delete', 'Data surat keterangan dokter berhasil dihapus');
     }
-    public function cetak($id)
+    public function cetak($id, $qrcode)
     {
         $kd = KeteranganDokter::findOrFail($id);
-        $pdf = PDF::loadView('backend.keterangan-dokter.cetak', compact('kd'))->setPaper('A4', 'portrait');
+        $qrcode = $kd->qrcode;
+        $pdf = PDF::loadView('backend.keterangan-dokter.cetak', compact('kd', 'qrcode'))->setPaper('A4', 'portrait');
         return $pdf->stream();
     }
 }
