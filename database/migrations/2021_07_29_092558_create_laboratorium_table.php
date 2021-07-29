@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddForeignToCovidsTable extends Migration
+class CreateLaboratoriumTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,14 @@ class AddForeignToCovidsTable extends Migration
      */
     public function up()
     {
-        Schema::table('covids', function (Blueprint $table) {
+        Schema::create('laboratorium', function (Blueprint $table) {
+            $table->bigIncrements('id_laboratorium');
+            $table->unsignedBigInteger('doctor_id');
+            $table->unsignedBigInteger('pasien_id');
+            $table->string('no_cm')->unique();
+            $table->date('tanggal');
+            $table->timestamps();
+
             $table->foreign('doctor_id')->references('id')->on('doctors')->onDelete('cascade');
             $table->foreign('pasien_id')->references('id')->on('pasiens')->onDelete('cascade');
         });
@@ -26,8 +33,6 @@ class AddForeignToCovidsTable extends Migration
      */
     public function down()
     {
-        Schema::table('covids', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('laboratorium');
     }
 }

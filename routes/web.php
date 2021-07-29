@@ -33,6 +33,8 @@ Route::middleware(['auth'])->group(function () {
     //pemeriksaan covid
     Route::resource('covid', 'CovidController');
     Route::get('/surat-keterangan/covid/{id}/code={qrcode}', 'CovidController@cetak')->name('covid.cetak');
+    //laboratorium
+    Route::resource('laboratorium', 'LaboratoriumController');
     //keterangan dokter
     Route::resource('keterangan-dokter', 'KeteranganDokterController');
     Route::get('/surat-keterangan-dokter/{id}/code={qrcode}', 'KeteranganDokterController@cetak')->name('keterangan-dokter.cetak');
