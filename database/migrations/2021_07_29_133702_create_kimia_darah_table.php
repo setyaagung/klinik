@@ -16,18 +16,19 @@ class CreateKimiaDarahTable extends Migration
         Schema::create('kimia_darah', function (Blueprint $table) {
             $table->bigIncrements('id_kimia_darah');
             $table->unsignedBigInteger('id_laboratorium');
-            $table->string('glukosa_puasa');
-            $table->string('glukosa_pp');
-            $table->string('gula_darah_sewaktu');
-            $table->string('cholesterol_total');
-            $table->string('hbsag');
-            $table->string('trigliserida');
-            $table->string('hemoglobin');
-            $table->string('asam_urat');
-            $table->string('sgot');
-            $table->string('sgpt');
-            $table->string('ureum');
-            $table->string('kreatinin');
+            $table->string('qrcode')->unique();
+            $table->string('glukosa_puasa_kd')->nullable();
+            $table->string('glukosa_pp_kd')->nullable();
+            $table->string('gula_darah_sewaktu_kd')->nullable();
+            $table->string('cholesterol_total_kd')->nullable();
+            $table->string('hbsag_kd')->nullable();
+            $table->string('trigliserida_kd')->nullable();
+            $table->string('hemoglobin_kd')->nullable();
+            $table->string('asam_urat_kd')->nullable();
+            $table->string('sgot_kd')->nullable();
+            $table->string('sgpt_kd')->nullable();
+            $table->string('ureum_kd')->nullable();
+            $table->string('kreatinin_kd')->nullable();
             $table->timestamps();
 
             $table->foreign('id_laboratorium')->references('id_laboratorium')->on('laboratorium')->onDelete('cascade');

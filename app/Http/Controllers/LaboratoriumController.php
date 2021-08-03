@@ -6,6 +6,7 @@ use App\Model\DarahLengkap;
 use App\Model\DarahRutin;
 use App\Model\Doctor;
 use App\Model\KimiaDarah;
+use App\Model\Laboratorium;
 use App\Model\Pasien;
 use App\Model\Serologi;
 use App\Model\UrineRutin;
@@ -59,84 +60,89 @@ class LaboratoriumController extends Controller
         ]);
         DarahRutin::create([
             'id_laboratorium' => $lab->id_laboratorium,
-            'hemoglobin' => $request->input('hemoglobin'),
-            'eritrosit' => $request->input('eritrosit'),
-            'trombosit' => $request->input('trombosit'),
-            'hematokrit' => $request->input('hematokrit'),
-            'typhi_o' => $request->input('typhi_o'),
-            'typhi_h' => $request->input('typhi_h'),
-            'paratyphi_ao' => $request->input('paratyphi_ao'),
-            'paratyphi_ah' => $request->input('paratyphi_ah'),
-            'paratyphi_bo' => $request->input('paratyphi_bo'),
-            'paratyphi_bh' => $request->input('paratyphi_bh'),
-            'paratyphi_co' => $request->input('paratyphi_co'),
-            'paratyphi_ch' => $request->input('paratyphi_ch'),
+            'qrcode' => \rand(10000000000, 99999999999),
+            'hemoglobin_dr' => $request->input('hemoglobin_dr'),
+            'eritrosit_dr' => $request->input('eritrosit_dr'),
+            'trombosit_dr' => $request->input('trombosit_dr'),
+            'hematokrit_dr' => $request->input('hematokrit_dr'),
+            'typhi_o_dr' => $request->input('typhi_o_dr'),
+            'typhi_h_dr' => $request->input('typhi_h_dr'),
+            'paratyphi_ao_dr' => $request->input('paratyphi_ao'),
+            'paratyphi_ah_dr' => $request->input('paratyphi_ah_dr'),
+            'paratyphi_bo_dr' => $request->input('paratyphi_bo_dr'),
+            'paratyphi_bh_dr' => $request->input('paratyphi_bh_dr'),
+            'paratyphi_co_dr' => $request->input('paratyphi_co_dr'),
+            'paratyphi_ch_dr' => $request->input('paratyphi_ch_dr'),
         ]);
         DarahLengkap::create([
             'id_laboratorium' => $lab->id_laboratorium,
-            'hemoglobin' => $request->input('hemoglobin'),
-            'eritrosit' => $request->input('eritrosit'),
-            'trombosit' => $request->input('trombosit'),
-            'eosinophil' => $request->input('eosinophil'),
-            'basophil' => $request->input('basophil'),
-            'neutrofil_batang' => $request->input('neutrofil_batang'),
-            'neutrofil_segmen' => $request->input('neutrofil_segmen'),
-            'limfosit' => $request->input('limfosit'),
-            'monosit' => $request->input('monosit'),
-            'hematrokit' => $request->input('hematrokit'),
-            'mcv' => $request->input('mcv'),
-            'mch' => $request->input('mch'),
-            'mchc' => $request->input('mchc'),
-            'pwd' => $request->input('pwd'),
-            'typhi_o' => $request->input('typhi_o'),
-            'typhi_h' => $request->input('typhi_h'),
-            'paratyphi_ao' => $request->input('paratyphi_ao'),
-            'paratyphi_ah' => $request->input('paratyphi_ah'),
-            'paratyphi_bo' => $request->input('paratyphi_bo'),
-            'paratyphi_bh' => $request->input('paratyphi_bh'),
-            'paratyphi_co' => $request->input('paratyphi_co'),
+            'qrcode' => \rand(10000000000, 99999999999),
+            'hemoglobin_dl' => $request->input('hemoglobin_dl'),
+            'eritrosit_dl' => $request->input('eritrosit_dl'),
+            'trombosit_dl' => $request->input('trombosit_dl'),
+            'eosinophil_dl' => $request->input('eosinophil_dl'),
+            'basophil_dl' => $request->input('basophil_dl'),
+            'neutrofil_batang_dl' => $request->input('neutrofil_batang_dl'),
+            'neutrofil_segmen_dl' => $request->input('neutrofil_segmen_dl'),
+            'limfosit_dl' => $request->input('limfosit_dl'),
+            'monosit_dl' => $request->input('monosit_dl'),
+            'hematrokit_dl' => $request->input('hematrokit_dl'),
+            'mcv_dl' => $request->input('mcv_dl'),
+            'mch_dl' => $request->input('mch_dl'),
+            'mchc_dl' => $request->input('mchc_dl'),
+            'pwd_dl' => $request->input('pwd_dl'),
+            'typhi_o_dl' => $request->input('typhi_o_dl'),
+            'typhi_h_dl' => $request->input('typhi_h_dl'),
+            'paratyphi_ao_dl' => $request->input('paratyphi_ao_dl'),
+            'paratyphi_ah_dl' => $request->input('paratyphi_ah_dl'),
+            'paratyphi_bo_dl' => $request->input('paratyphi_bo_dl'),
+            'paratyphi_bh_dl' => $request->input('paratyphi_bh_dl'),
+            'paratyphi_co_dl' => $request->input('paratyphi_co_dl'),
         ]);
         UrineRutin::create([
             'id_laboratorium' => $lab->id_laboratorium,
-            'warna' => $request->input('warna'),
-            'kejernihan' => $request->input('kejernihan'),
-            'ph' => $request->input('ph'),
-            'protein' => $request->input('protein'),
-            'glukosa' => $request->input('glukosa'),
-            'keton' => $request->input('keton'),
-            'bilirubin' => $request->input('bilirubin'),
-            'urobilinogen' => $request->input('urobilinogen'),
-            'nitrit' => $request->input('nitrit'),
-            'berat_jenis' => $request->input('berat_jenis'),
-            'epitel_gepeng' => $request->input('epitel_gepeng'),
-            'ca_oxalat' => $request->input('ca_oxalat'),
-            'triple_fosfat' => $request->input('triple_fosfat'),
-            'eritrosit' => $request->input('eritrosit'),
-            'leukosit' => $request->input('leukosit'),
-            'blood' => $request->input('blood'),
+            'qrcode' => \rand(10000000000, 99999999999),
+            'warna_ur' => $request->input('warna_ur'),
+            'kejernihan_ur' => $request->input('kejernihan_ur'),
+            'ph_ur' => $request->input('ph_ur'),
+            'protein_ur' => $request->input('protein_ur'),
+            'glukosa_ur' => $request->input('glukosa_ur'),
+            'keton_ur' => $request->input('keton_ur'),
+            'bilirubin_ur' => $request->input('bilirubin_ur'),
+            'urobilinogen_ur' => $request->input('urobilinogen_ur'),
+            'nitrit_ur' => $request->input('nitrit_ur'),
+            'berat_jenis_ur' => $request->input('berat_jenis_ur'),
+            'epitel_gepeng_ur' => $request->input('epitel_gepeng_ur'),
+            'ca_oxalat_ur' => $request->input('ca_oxalat_ur'),
+            'triple_fosfat_ur' => $request->input('triple_fosfat_ur'),
+            'eritrosit_ur' => $request->input('eritrosit_ur'),
+            'leukosit_ur' => $request->input('leukosit_ur'),
+            'blood_ur' => $request->input('blood_ur'),
         ]);
         Serologi::create([
             'id_laboratorium' => $lab->id_laboratorium,
-            'asam_urat' => $request->input('asam_urat'),
-            'sgot' => $request->input('sgot'),
-            'sgpt' => $request->input('sgpt'),
-            'ureum' => $request->input('ureum'),
-            'kreatinin' => $request->input('kreatinin'),
-            'hcg' => $request->input('hcg'),
+            'qrcode' => \rand(10000000000, 99999999999),
+            'asam_urat_sl' => $request->input('asam_urat_sl'),
+            'sgot_sl' => $request->input('sgot_sl'),
+            'sgpt_sl' => $request->input('sgpt_sl'),
+            'ureum_sl' => $request->input('ureum_sl'),
+            'kreatinin_sl' => $request->input('kreatinin_sl'),
+            'hcg_sl' => $request->input('hcg_sl'),
         ]);
         KimiaDarah::create([
             'id_laboratorium' => $lab->id_laboratorium,
-            'glukosa_puasa' => $request->input('glukosa_puasa'),
-            'glukosa_pp' => $request->input('glukosa_pp'),
-            'gula_darah_sewaktu' => $request->input('gula_darah_sewaktu'),
-            'cholesterol_total' => $request->input('cholesterol_total'),
-            'trigliserida' => $request->input('trigliserida'),
-            'hemoglobin' => $request->input('hemoglobin'),
-            'asam_urat' => $request->input('asam_urat'),
-            'sgot' => $request->input('sgot'),
-            'sgpt' => $request->input('sgpt'),
-            'ureum' => $request->input('ureum'),
-            'kreatinin' => $request->input('kreatinin'),
+            'qrcode' => \rand(10000000000, 99999999999),
+            'glukosa_puasa_kd' => $request->input('glukosa_puasa_kd'),
+            'glukosa_pp_kd' => $request->input('glukosa_pp_kd'),
+            'gula_darah_sewaktu_kd' => $request->input('gula_darah_sewaktu_kd'),
+            'cholesterol_total_kd' => $request->input('cholesterol_total_kd'),
+            'trigliserida_kd' => $request->input('trigliserida_kd'),
+            'hemoglobin_kd' => $request->input('hemoglobin_kd'),
+            'asam_urat_kd' => $request->input('asam_urat_kd'),
+            'sgot_kd' => $request->input('sgot_kd'),
+            'sgpt_kd' => $request->input('sgpt_kd'),
+            'ureum_kd' => $request->input('ureum_kd'),
+            'kreatinin_kd' => $request->input('kreatinin_kd'),
         ]);
         return redirect()->route('laboratorium.index')->with('create', 'Data permintaan laboratorium berhasil ditambahkan');
     }
@@ -163,11 +169,11 @@ class LaboratoriumController extends Controller
         $lab = Laboratorium::findOrFail($id);
         $doctors = Doctor::orderBy('nama_dokter', 'ASC')->get();
         $pasiens = Pasien::orderBy('nama_pasien', 'ASC')->get();
-        $hematologi = Hematologi::where('id_lab', $lab->id_lab)->first();
-        $kimia_klinik = KimiaKlinik::where('id_lab', $lab->id_lab)->first();
-        $urine = Urine::where('id_lab', $lab->id_lab)->first();
-        $serologi = Serologi::where('id_lab', $lab->id_lab)->first();
-        $rapid = Rapid::where('id_lab', $lab->id_lab)->first();
+        $hematologi = Hematologi::where('id_laboratorium', $lab->id_lab)->first();
+        $kimia_klinik = KimiaKlinik::where('id_laboratorium', $lab->id_lab)->first();
+        $urine = Urine::where('id_laboratorium', $lab->id_lab)->first();
+        $serologi = Serologi::where('id_laboratorium', $lab->id_lab)->first();
+        $rapid = Rapid::where('id_laboratorium', $lab->id_lab)->first();
         return view('backend.laboratorium.edit', \compact('lab', 'doctors', 'pasiens', 'hematologi', 'kimia_klinik', 'urine', 'serologi', 'rapid'));
     }
 
@@ -181,11 +187,11 @@ class LaboratoriumController extends Controller
     public function update(Request $request, $id)
     {
         $lab = Laboratorium::findOrFail($id);
-        $hematologi = Hematologi::where('id_lab', $lab->id_lab)->first();
-        $kimia_klinik = KimiaKlinik::where('id_lab', $lab->id_lab)->first();
-        $urine = Urine::where('id_lab', $lab->id_lab)->first();
-        $serologi = Serologi::where('id_lab', $lab->id_lab)->first();
-        $rapid = Rapid::where('id_lab', $lab->id_lab)->first();
+        $hematologi = Hematologi::where('id_laboratorium', $lab->id_lab)->first();
+        $kimia_klinik = KimiaKlinik::where('id_laboratorium', $lab->id_lab)->first();
+        $urine = Urine::where('id_laboratorium', $lab->id_lab)->first();
+        $serologi = Serologi::where('id_laboratorium', $lab->id_lab)->first();
+        $rapid = Rapid::where('id_laboratorium', $lab->id_lab)->first();
         $request->validate([
             'doctor_id' => 'required',
             'pasien_id' => 'required',
@@ -260,11 +266,11 @@ class LaboratoriumController extends Controller
     public function cetak($id)
     {
         $lab = Laboratorium::findOrFail($id);
-        $hematologi = Hematologi::where('id_lab', $lab->id_lab)->first();
-        $kimia_klinik = KimiaKlinik::where('id_lab', $lab->id_lab)->first();
-        $urine = Urine::where('id_lab', $lab->id_lab)->first();
-        $serologi = Serologi::where('id_lab', $lab->id_lab)->first();
-        $rapid = Rapid::where('id_lab', $lab->id_lab)->first();
+        $hematologi = Hematologi::where('id_laboratorium', $lab->id_lab)->first();
+        $kimia_klinik = KimiaKlinik::where('id_laboratorium', $lab->id_lab)->first();
+        $urine = Urine::where('id_laboratorium', $lab->id_lab)->first();
+        $serologi = Serologi::where('id_laboratorium', $lab->id_lab)->first();
+        $rapid = Rapid::where('id_laboratorium', $lab->id_lab)->first();
         $pdf = PDF::loadView('backend.laboratorium.cetak', \compact('lab', 'doctors', 'pasiens', 'hematologi', 'kimia_klinik', 'urine', 'serologi', 'rapid'))->setPaper('A4', 'portrait');
         return $pdf->stream();
     }

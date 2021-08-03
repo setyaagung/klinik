@@ -10,11 +10,12 @@ class Serologi extends Model
     protected $primaryKey = 'id_serologi';
     protected $fillable = [
         'id_laboratorium',
-        'asam_urat',
-        'sgot',
-        'sgpt',
-        'ureum',
-        'kreatinin',
-        'hcg',
+        'qrcode',
+        'asam_urat_sl',
+        'sgot_sl',
+        'sgpt_sl',
+        'ureum_sl',
+        'kreatinin_sl',
+        'hcg_sl',
     ];
 }

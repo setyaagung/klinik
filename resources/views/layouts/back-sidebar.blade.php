@@ -59,6 +59,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{ route('laboratorium.index')}}" class="nav-link {{ (request()->segment(1) == 'laboratorium') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-folder-plus"></i>
+                        <p>Laboratorium</p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="{{ route('keterangan-dokter.index')}}" class="nav-link {{ (request()->segment(1) == 'keterangan-dokter') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-file"></i>
                         <p>Surat Keterangan Dokter</p>

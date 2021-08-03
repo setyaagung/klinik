@@ -22,6 +22,6 @@ class Laboratorium extends Model
 
     public function pasien()
     {
-        $this->belongsTo(Pasien::class);
+        return $this->belongsTo(Pasien::class);
     }
 }

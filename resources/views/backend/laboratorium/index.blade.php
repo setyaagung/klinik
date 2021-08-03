@@ -49,10 +49,9 @@
                                     <tr>
                                         <th>NO</th>
                                         <th>TANGGAL</th>
+                                        <th>NO CM</th>
                                         <th>DOKTER</th>
                                         <th>PASIEN</th>
-                                        <th>PENGAMBILAN SAMPEL</th>
-                                        <th>JADI HASIL</th>
                                         <th>AKSI</th>
                                     </tr>
                                 </thead>
@@ -61,12 +60,13 @@
                                         <tr>
                                             <td>{{ $loop->iteration}}</td>
                                             <td>{{ \Carbon\Carbon::parse($lab->tanggal)->isoFormat('D MMMM Y')}}</td>
+                                            <td>{{ $lab->no_cm}}</td>
                                             <td>{{ $lab->doctor->nama_dokter}}</td>
                                             <td>{{ $lab->pasien->nama_pasien}}</td>
                                             <td>
-                                                <a href="{{ route('laboratorium.cetak',$lab->id_lab)}}" class="btn btn-success btn-sm" target="_blank"><i class="fas fa-file-pdf"></i> Cetak</a>
-                                                <a href="{{ route('laboratorium.edit',$lab->id_lab)}}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
-                                                <form action="{{ route('laboratorium.destroy', $lab->id_lab)}}" method="POST" class="d-inline">
+                                                <a href="{{ route('laboratorium.cetak',[$lab->id_lab,$lab->qrcode])}}" class="btn btn-success btn-sm" target="_blank"><i class="fas fa-file-pdf"></i> Cetak</a>
+                                                <a href="{{ route('laboratorium.edit',$lab->id_laboratorium)}}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
+                                                <form action="{{ route('laboratorium.destroy', $lab->id_laboratorium)}}" method="POST" class="d-inline">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus data ini??')"><i class="fas fa-trash"></i> Hapus</button>

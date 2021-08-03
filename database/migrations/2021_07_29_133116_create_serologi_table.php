@@ -16,12 +16,13 @@ class CreateSerologiTable extends Migration
         Schema::create('serologi', function (Blueprint $table) {
             $table->bigIncrements('id_serologi');
             $table->unsignedBigInteger('id_laboratorium');
-            $table->string('asam_urat');
-            $table->string('sgot');
-            $table->string('sgpt');
-            $table->string('ureum');
-            $table->string('kreatinin');
-            $table->string('hcg');
+            $table->string('qrcode')->unique();
+            $table->string('asam_urat_sl')->nullable();
+            $table->string('sgot_sl')->nullable();
+            $table->string('sgpt_sl')->nullable();
+            $table->string('ureum_sl')->nullable();
+            $table->string('kreatinin_sl')->nullable();
+            $table->string('hcg_sl')->nullable();
             $table->timestamps();
 
             $table->foreign('id_laboratorium')->references('id_laboratorium')->on('laboratorium')->onDelete('cascade');

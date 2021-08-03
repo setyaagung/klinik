@@ -17,24 +17,6 @@
     @enderror
 </div>
 <div class="form-group">
-    <label for="">Jam Pengambilan Sampel</label>
-    <input type="time" class="form-control @error('pengambilan_sampel') is-invalid @enderror" name="pengambilan_sampel">
-    @error('pengambilan_sampel')
-        <span class="invalid-feedback" role="alert">
-            <strong>{{ $message }}</strong>
-        </span>
-    @enderror
-</div>
-<div class="form-group">
-    <label for="">Jam Jadi Hasil</label>
-    <input type="time" class="form-control @error('hasil') is-invalid @enderror" name="hasil">
-    @error('hasil')
-        <span class="invalid-feedback" role="alert">
-            <strong>{{ $message }}</strong>
-        </span>
-    @enderror
-</div>
-<div class="form-group">
     <label for="">Dokter Penanggung Jawab</label>
     <select name="doctor_id" class="form-control select2 @error('doctor_id') is-invalid @enderror" style="width: 100%">
         <option value="">-- Pilih Dokter --</option>
