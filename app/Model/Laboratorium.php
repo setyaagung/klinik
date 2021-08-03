@@ -12,7 +12,8 @@ class Laboratorium extends Model
         'doctor_id',
         'pasien_id',
         'no_cm',
-        'tanggal'
+        'tanggal',
+        'qrcode'
     ];
 
     public function doctor()

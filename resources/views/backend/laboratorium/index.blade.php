@@ -64,7 +64,7 @@
                                             <td>{{ $lab->doctor->nama_dokter}}</td>
                                             <td>{{ $lab->pasien->nama_pasien}}</td>
                                             <td>
-                                                <a href="{{ route('laboratorium.cetak',[$lab->id_lab,$lab->qrcode])}}" class="btn btn-success btn-sm" target="_blank"><i class="fas fa-file-pdf"></i> Cetak</a>
+                                                <a href="{{ route('laboratorium.cetak',[$lab->id_laboratorium,$lab->qrcode])}}" class="btn btn-success btn-sm" target="_blank"><i class="fas fa-file-pdf"></i> Cetak</a>
                                                 <a href="{{ route('laboratorium.edit',$lab->id_laboratorium)}}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
                                                 <form action="{{ route('laboratorium.destroy', $lab->id_laboratorium)}}" method="POST" class="d-inline">
                                                     @csrf

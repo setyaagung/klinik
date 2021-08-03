@@ -19,7 +19,7 @@
                             </h3>
                         </div>
                         <div class="card-body">
-                            <form action="{{ route('laboratorium.update',$lab->id_lab)}}" method="POST">
+                            <form action="{{ route('laboratorium.update',$lab->id_laboratorium)}}" method="POST">
                                 @csrf
                                 @method('PATCH')
                                 <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
@@ -27,16 +27,19 @@
                                         <a class="nav-link active" id="form1-tab" data-toggle="tab" href="#form1" role="tab">Data Pasien</a>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <a class="nav-link" id="form2-tab" data-toggle="tab" href="#form2" role="tab">Hematologi</a>
+                                        <a class="nav-link" id="form2-tab" data-toggle="tab" href="#form2" role="tab">Darah Rutin</a>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <a class="nav-link" id="form3-tab" data-toggle="tab" href="#form3" role="tab">Kimia Klinik</a>
+                                        <a class="nav-link" id="form3-tab" data-toggle="tab" href="#form3" role="tab">Darah Lengkap & WIDAL</a>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <a class="nav-link" id="form4-tab" data-toggle="tab" href="#form4" role="tab">Urine</a>
+                                        <a class="nav-link" id="form4-tab" data-toggle="tab" href="#form4" role="tab">Urine Rutin</a>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <a class="nav-link" id="form5-tab" data-toggle="tab" href="#form5" role="tab">Serologi & Rapid</a>
+                                        <a class="nav-link" id="form5-tab" data-toggle="tab" href="#form5" role="tab">Serologi Faal Hati & Fungsi Ginjal</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" id="form6-tab" data-toggle="tab" href="#form6" role="tab">Kimia Darah</a>
                                     </li>
                                 </ul>
                                 <div class="tab-content" id="myTabContent">
@@ -54,6 +57,9 @@
                                     </div>
                                     <div class="tab-pane fade" id="form5" role="tabpanel" aria-labelledby="form5-tab">
                                         @include('backend.laboratorium.form-edit.formulir5')
+                                    </div>
+                                    <div class="tab-pane fade" id="form6" role="tabpanel" aria-labelledby="form6-tab">
+                                        @include('backend.laboratorium.form-edit.formulir6')
                                     </div>
                                     <hr>
                                     <div class="float-right">

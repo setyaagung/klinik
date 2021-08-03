@@ -18,6 +18,7 @@ class CreateLaboratoriumTable extends Migration
             $table->unsignedBigInteger('doctor_id');
             $table->unsignedBigInteger('pasien_id');
             $table->string('no_cm')->unique();
+            $table->string('qrcode');
             $table->date('tanggal');
             $table->timestamps();
 
