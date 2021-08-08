@@ -19,6 +19,7 @@ class CreateDarahRutinTable extends Migration
             $table->string('qrcode')->unique();
             $table->string('hemoglobin_dr')->nullable();
             $table->string('eritrosit_dr')->nullable();
+            $table->string('leukosit_dr')->nullable();
             $table->string('trombosit_dr')->nullable();
             $table->string('hematokrit_dr')->nullable();
             $table->string('typhi_o_dr')->nullable();

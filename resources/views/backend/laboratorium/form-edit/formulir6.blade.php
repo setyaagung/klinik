@@ -15,7 +15,7 @@
     <input type="text" class="form-control" name="cholesterol_total_kd" value="{{ $kimia_darah->cholesterol_total_kd}}">
 </div>
 <div class="form-group">
-    <label for="">HBsAG</label>
+    <label for="">HBsAg</label>
     <input type="text" class="form-control" name="hbsag_kd" value="{{ $kimia_darah->hbsag_kd}}">
 </div>
 <div class="form-group">
@@ -44,5 +44,5 @@
 </div>
 <div class="form-group">
     <label for="">Kreatinin</label>
-    <input type="text" class="form-control" name="kreatinin_kd" value="{{ $kimia_darah->kreatinin}}">
+    <input type="text" class="form-control" name="kreatinin_kd" value="{{ $kimia_darah->kreatinin_kd}}">
 </div>

@@ -24,6 +24,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 //frontend surat keterangan
 Route::get('/surat-keterangan/{id}/code={qrcode}', 'SuratController@index')->name('surat');
 Route::get('/keterangan-dokter/{id}/code={qrcode}', 'SuratController@surat_dokter')->name('surat_dokter');
+Route::get('/surat-laboratorium/{id}/darah-rutin/code={qrcode}', 'SuratController@darah_rutin')->name('darah_rutin');
+Route::get('/surat-laboratorium/{id}/darah-lengkap/code={qrcode}', 'SuratController@darah_lengkap')->name('darah_lengkap');
+Route::get('/surat-laboratorium/{id}/urine-rutin/code={qrcode}', 'SuratController@urine_rutin')->name('urine_rutin');
+Route::get('/surat-laboratorium/{id}/serologi/code={qrcode}', 'SuratController@serologi')->name('serologi');
+Route::get('/surat-laboratorium/{id}/kimia-darah/code={qrcode}', 'SuratController@kimia_darah')->name('kimia_darah');
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
     //dokter

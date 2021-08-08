@@ -13,6 +13,7 @@ class DarahRutin extends Model
         'qrcode',
         'hemoglobin_dr',
         'eritrosit_dr',
+        'leukosit_dr',
         'trombosit_dr',
         'hematokrit_dr',
         'typhi_o_dr',

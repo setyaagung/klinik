@@ -20,13 +20,14 @@ class CreateDarahLengkapTable extends Migration
             $table->string('hemoglobin_dl')->nullable();
             $table->string('eritrosit_dl')->nullable();
             $table->string('trombosit_dl')->nullable();
+            $table->string('leukosit_dl')->nullable();
             $table->string('eosinophil_dl')->nullable();
             $table->string('basophil_dl')->nullable();
             $table->string('neutrofil_batang_dl')->nullable();
             $table->string('neutrofil_segmen_dl')->nullable();
             $table->string('limfosit_dl')->nullable();
             $table->string('monosit_dl')->nullable();
-            $table->string('hematrokit_dl')->nullable();
+            $table->string('hematokrit_dl')->nullable();
             $table->string('mcv_dl')->nullable();
             $table->string('mch_dl')->nullable();
             $table->string('mchc_dl')->nullable();
