@@ -125,6 +125,7 @@
                         <td>HCG</td>
                         <td class="text-center">{{ $sl->hcg_sl}}</td>
                         <td class="text-center">
+                            Negatif
                         </td>
                     </tr>
                 </tbody>
