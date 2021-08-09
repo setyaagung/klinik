@@ -927,7 +927,7 @@
                 <tr>
                     <td>Asam Urat</td>
                     <td class="text-center">{{ $serologi->asam_urat_sl}}</td>
-                    <td class="text-center"> <br>
+                    <td class="text-center"> Lk. 3,4 - 7,0 mg/dL<br>
                         Pr.2,4 - 5,1 mg/dL
                     </td>
                 </tr>
@@ -961,6 +961,7 @@
                     <td>HCG</td>
                     <td class="text-center">{{ $serologi->hcg_sl}}</td>
                     <td class="text-center">
+                        Negatif
                     </td>
                 </tr>
             </tbody>
