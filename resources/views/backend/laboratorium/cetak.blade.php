@@ -36,7 +36,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <table class="table table-sm table-borderless" style="font-size: 13px">
+            <table class="table table-sm table-borderless" style="font-size: 13px;">
                 <tbody>
                     <tr>
                         <th>Nama Pasien</th>
@@ -57,7 +57,7 @@
                     <tr>
                         <th style="width: 15%">Alamat</th>
                         <td> : </td>
-                        <td style="width: 30%;text-align: justify;">{{ $lab->pasien->alamat}}</td>
+                        <td style="width: 30%;text-align: justify;height:60px">{{ $lab->pasien->alamat}}</td>
                     </tr>
                     <tr>
                         <th style="width: 15%">DARAH RUTIN</th>
@@ -185,7 +185,7 @@
             </tbody>
         </table>
     </div>
-    <div class="mengetahui mt-5 mb-5" style="font-size: 13px;">
+    <div class="mengetahui mt-5" style="font-size: 13px;margin-bottom:48px">
         <div class="mr-4 ml-4">
             <div class="row">
                 <div class="col-12">
@@ -525,7 +525,7 @@
                     <tr>
                         <th style="width: 15%">Alamat</th>
                         <td> : </td>
-                        <td style="width: 30%;text-align: justify;">{{ $lab->pasien->alamat}}</td>
+                        <td style="width: 30%;text-align: justify;height:60px">{{ $lab->pasien->alamat}}</td>
                     </tr>
                     <tr>
                         <th style="width: 15%">URINE RUTIN</th>
@@ -731,7 +731,7 @@
                     <tr>
                         <th style="width: 15%">Alamat</th>
                         <td> : </td>
-                        <td style="width: 30%;text-align: justify;">{{ $lab->pasien->alamat}}</td>
+                        <td style="width: 30%;text-align: justify;height:60px">{{ $lab->pasien->alamat}}</td>
                     </tr>
                     <tr>
                         <th style="width: 15%">KIMIA DARAH</th>
@@ -901,7 +901,7 @@
                     <tr>
                         <th style="width: 15%">Alamat</th>
                         <td> : </td>
-                        <td style="width: 30%;text-align: justify;">{{ $lab->pasien->alamat}}</td>
+                        <td style="width: 30%;text-align: justify;height:60px">{{ $lab->pasien->alamat}}</td>
                     </tr>
                 </tbody>
             </table>

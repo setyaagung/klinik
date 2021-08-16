@@ -29,6 +29,7 @@ Route::get('/surat-laboratorium/{id}/darah-lengkap/code={qrcode}', 'SuratControl
 Route::get('/surat-laboratorium/{id}/urine-rutin/code={qrcode}', 'SuratController@urine_rutin')->name('urine_rutin');
 Route::get('/surat-laboratorium/{id}/serologi/code={qrcode}', 'SuratController@serologi')->name('serologi');
 Route::get('/surat-laboratorium/{id}/kimia-darah/code={qrcode}', 'SuratController@kimia_darah')->name('kimia_darah');
+Route::get('/surat-vaksin/{id}/code={qrcode}', 'SuratController@vaksin')->name('vaksin');
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
     //dokter
@@ -39,13 +40,16 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('covid', 'CovidController');
     Route::get('/surat-keterangan/covid/{id}/code={qrcode}', 'CovidController@cetak')->name('covid.cetak');
     //laboratorium
-    //kematian
     Route::get('/laboratorium/getpasien', 'LaboratoriumController@getPasien');
     Route::resource('laboratorium', 'LaboratoriumController');
     Route::get('/surat-laboratorium/{id}/code={qrcode}', 'LaboratoriumController@cetak')->name('laboratorium.cetak');
     //keterangan dokter
     Route::resource('keterangan-dokter', 'KeteranganDokterController');
     Route::get('/surat-keterangan-dokter/{id}/code={qrcode}', 'KeteranganDokterController@cetak')->name('keterangan-dokter.cetak');
+    //vaksin
+    Route::get('/vaksin/getpasien', 'VaksinController@getPasien');
+    Route::resource('vaksin', 'VaksinController');
+    Route::get('/vaksin/{id}/code={qrcode}', 'VaksinController@cetak')->name('vaksin.cetak');
     //user
     Route::resource('user', 'UserController');
     Route::get('/update-status/{id}', 'UserController@update_status');

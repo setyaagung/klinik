@@ -10,6 +10,7 @@ use App\Model\KimiaDarah;
 use App\Model\Laboratorium;
 use App\Model\Serologi;
 use App\Model\UrineRutin;
+use App\Model\Vaksin;
 use Illuminate\Http\Request;
 
 class SuratController extends Controller
@@ -60,5 +61,12 @@ class SuratController extends Controller
         $kd = KimiaDarah::where('id_laboratorium', $lab->id_laboratorium)->first();
         $qrcode = $kd->qrcode;
         return view('kimia-darah', compact('lab', 'kd', 'qrcode'));
+    }
+
+    public function vaksin($id, $qrcode)
+    {
+        $vaksin = Vaksin::findOrFail($id);
+        $qrcode = $vaksin->no_vaksin;
+        return view('vaksin', compact('vaksin', 'qrcode'));
     }
 }
