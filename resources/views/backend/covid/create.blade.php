@@ -73,6 +73,7 @@
                                         <option value="">-- Pilih Pemeriksaan --</option>
                                         <option value="COVID RAPID TEST SWAB CORPORATE" {{ old('pemeriksaan') == 'COVID RAPID TEST SWAB CORPORATE' ? 'selected':''}}>COVID RAPID TEST SWAB CORPORATE</option>
                                         <option value="Antigen SARS - Cov - 2" {{ old('pemeriksaan') == 'Antigen SARS - Cov - 2' ? 'selected':''}}>Antigen SARS - Cov - 2</option>
+                                        <option value="Covid Rapid Test lg-G/lg-M" {{ old('pemeriksaan') == 'Covid Rapid Test lg-G/lg-M' ? 'selected':''}}>Covid Rapid Test lg-G/lg-M</option>
                                     </select>
                                     @error('pemeriksaan')
                                         <span class="invalid-feedback" role="alert">
@@ -88,6 +89,8 @@
                                                 <option value="">-- Pilih Hasil --</option>
                                                 <option value="Negatif" {{ old('hasil') == 'Negatif' ? 'selected':''}}>Negatif</option>
                                                 <option value="Positif" {{ old('hasil') == 'Positif' ? 'selected':''}}>Positif</option>
+                                                <option value="Non-Reaktif" {{ old('hasil') == 'Non-Reaktif' ? 'selected':''}}>Non-Reaktif</option>
+                                                <option value="Reaktif" {{ old('hasil') == 'Reaktif' ? 'selected':''}}>Reaktif</option>
                                             </select>
                                             @error('hasil')
                                                 <span class="invalid-feedback" role="alert">
@@ -103,6 +106,8 @@
                                                 <option value="">-- Pilih Nilai Rujukan --</option>
                                                 <option value="Negatif" {{ old('rujukan') == 'Negatif' ? 'selected':''}}>Negatif</option>
                                                 <option value="Positif" {{ old('rujukan') == 'Positif' ? 'selected':''}}>Positif</option>
+                                                <option value="Non-Reaktif" {{ old('rujukan') == 'Non-Reaktif' ? 'selected':''}}>Non-Reaktif</option>
+                                                <option value="Reaktif" {{ old('rujukan') == 'Reaktif' ? 'selected':''}}>Reaktif</option>
                                             </select>
                                             @error('rujukan')
                                                 <span class="invalid-feedback" role="alert">

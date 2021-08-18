@@ -108,7 +108,7 @@
                             <td></td>
                             <td></td>
                         </tr>
-                    @else
+                    @elseif ($cv->pemeriksaan == 'Antigen SARS - Cov - 2')
                         <tr style="font-size: 13px !important">
                             <td>COVID RAPID TEST SWAB CORPORATE</td>
                             <td></td>
@@ -117,6 +117,25 @@
                         </tr>
                         <tr style="font-size: 13px !important">
                             <td>Antigen SARS - Cov - 2</td>
+                            <td>{{ $cv->hasil}}</td>
+                            <td>{{ $cv->rujukan}}</td>
+                            <td>{{ $cv->satuan}}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    @else
+                        <tr style="font-size: 13px !important">
+                            <td>Rapid Test lg-G COVID-19</td>
+                            <td>{{ $cv->hasil}}</td>
+                            <td>{{ $cv->rujukan}}</td>
+                            <td>{{ $cv->satuan}}</td>
+                        </tr>
+                        <tr style="font-size: 13px !important">
+                            <td>Rapid Test lg-M COVID-19</td>
                             <td>{{ $cv->hasil}}</td>
                             <td>{{ $cv->rujukan}}</td>
                             <td>{{ $cv->satuan}}</td>

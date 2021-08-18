@@ -74,6 +74,7 @@
                                         <option value="">-- Pilih Pemeriksaan --</option>
                                         <option value="COVID RAPID TEST SWAB CORPORATE" {{ $covid->pemeriksaan == 'COVID RAPID TEST SWAB CORPORATE' ? 'selected':''}}>COVID RAPID TEST SWAB CORPORATE</option>
                                         <option value="Antigen SARS - Cov - 2" {{ $covid->pemeriksaan == 'Antigen SARS - Cov - 2' ? 'selected':''}}>Antigen SARS - Cov - 2</option>
+                                        <option value="Covid Rapid Test lg-G/lg-M" {{ $covid->pemeriksaan == 'Covid Rapid Test lg-G/lg-M' ? 'selected':''}}>Covid Rapid Test lg-G/lg-M</option>
                                     </select>
                                     @error('pemeriksaan')
                                         <span class="invalid-feedback" role="alert">
@@ -89,6 +90,8 @@
                                                 <option value="">-- Pilih Hasil --</option>
                                                 <option value="Negatif" {{ $covid->hasil == 'Negatif' ? 'selected':''}}>Negatif</option>
                                                 <option value="Positif" {{ $covid->hasil == 'Positif' ? 'selected':''}}>Positif</option>
+                                                <option value="Non-Reaktif" {{ $covid->hasil == 'Non-Reaktif' ? 'selected':''}}>Non-Reaktif</option>
+                                                <option value="Reaktif" {{ $covid->hasil == 'Reaktif' ? 'selected':''}}>Reaktif</option>
                                             </select>
                                             @error('hasil')
                                                 <span class="invalid-feedback" role="alert">
@@ -104,6 +107,8 @@
                                                 <option value="">-- Pilih Nilai Rujukan --</option>
                                                 <option value="Negatif" {{ $covid->rujukan == 'Negatif' ? 'selected':''}}>Negatif</option>
                                                 <option value="Positif" {{ $covid->rujukan == 'Positif' ? 'selected':''}}>Positif</option>
+                                                <option value="Non-Reaktif" {{ $covid->rujukan == 'Non-Reaktif' ? 'selected':''}}>Non-Reaktif</option>
+                                                <option value="Reaktif" {{ $covid->rujukan == 'Reaktif' ? 'selected':''}}>Reaktif</option>
                                             </select>
                                             @error('rujukan')
                                                 <span class="invalid-feedback" role="alert">
