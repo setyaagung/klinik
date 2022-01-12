@@ -25,6 +25,9 @@ class CreateCovidsTable extends Migration
             $table->string('satuan');
             $table->text('qrcode');
             $table->timestamps();
+
+            $table->foreign('doctor_id')->references('id')->on('doctors')->onDelete('cascade');
+            $table->foreign('pasien_id')->references('id')->on('pasiens')->onDelete('cascade');
         });
     }
 
