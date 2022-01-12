@@ -65,10 +65,10 @@
                                             <td>{{ $covid->no_sampel}}</td>
                                             <td>{{ $covid->doctor->nama_dokter}}</td>
                                             <td>
-                                                @if ($covid->pasien->nama_pasien == null)
-                                                    <i>( Data Pasien ini sudah dihapus)</i>
-                                                @else
+                                                @if ($covid->pasien->nama_pasien != null)
                                                     {{ $covid->pasien->nama_pasien}}
+                                                @else
+                                                    <i>( Data Pasien ini sudah dihapus)</i>
                                                 @endif
                                             </td>
                                             <td>{{ $covid->pemeriksaan}}</td>
