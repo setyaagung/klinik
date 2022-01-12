@@ -65,7 +65,7 @@
                                             <td>{{ $covid->no_sampel}}</td>
                                             <td>{{ $covid->doctor->nama_dokter}}</td>
                                             <td>
-                                                @if ($covid->pasien->id == null)
+                                                @if ($covid->pasien->nama_pasien == null)
                                                     <i>( Data Pasien ini sudah dihapus)</i>
                                                 @else
                                                     {{ $covid->pasien->nama_pasien}}
