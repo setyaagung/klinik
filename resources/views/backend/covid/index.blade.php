@@ -64,7 +64,7 @@
                                             <td>{{ \Carbon\Carbon::parse($covid->tanggal)->isoFormat('D MMMM Y')}}</td>
                                             <td>{{ $covid->no_sampel}}</td>
                                             <td>{{ $covid->doctor->nama_dokter}}</td>
-                                            <td>{{ $covid->pasien->nama_pasien}}</td>
+                                            <td>{{ $covid->pasien_id}}</td>
                                             <td>{{ $covid->pemeriksaan}}</td>
                                             <td>{{ $covid->hasil}}</td>
 
