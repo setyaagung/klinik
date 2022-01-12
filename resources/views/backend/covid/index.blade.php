@@ -64,13 +64,7 @@
                                             <td>{{ \Carbon\Carbon::parse($covid->tanggal)->isoFormat('D MMMM Y')}}</td>
                                             <td>{{ $covid->no_sampel}}</td>
                                             <td>{{ $covid->doctor->nama_dokter}}</td>
-                                            <td>
-                                                @if ($covid->pasien->nama_pasien != null)
-                                                    {{ $covid->pasien->nama_pasien}}
-                                                @else
-                                                    <i>( Data Pasien ini sudah dihapus)</i>
-                                                @endif
-                                            </td>
+                                            <td>{{ $covid->pasien->nama_pasien}}</td>
                                             <td>{{ $covid->pemeriksaan}}</td>
                                             <td>{{ $covid->hasil}}</td>
 
