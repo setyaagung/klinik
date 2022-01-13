@@ -21,7 +21,6 @@ class CreatePasiensTable extends Migration
             $table->date('tanggal_lahir');
             $table->text('alamat');
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
