@@ -73,7 +73,7 @@
                                         @php
                                             $kds = \App\Model\KeteranganDokter::where('id_keterangan_dokter',$kd->id_keterangan_dokter)->first();
                                             $qrcode = $kds->qrcode;
-                                            $url = 'https://sumber-medika.herokuapp.com/keterangan-dokter/'.$kds->id_keterangan_dokter.'/code='.$qrcode;
+                                            $url = 'https://sumber-medika.web.id/keterangan-dokter/'.$kds->id_keterangan_dokter.'/code='.$qrcode;
                                         @endphp
                                         <img src="https://chart.googleapis.com/chart?cht=qr&chs=140x140&chl={{$url}}choe=UTF-8" class="mt-1">
                                     </td>

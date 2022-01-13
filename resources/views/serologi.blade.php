@@ -152,7 +152,7 @@
                                         @php
                                             $sl = \App\Model\Serologi::where('id_serologi',$sl->id_serologi)->first();
                                             $qrcode = $sl->qrcode;
-                                            $url = 'https://sumber-medika.herokuapp.com/surat-laboratorium/'.$sl->id_serologi.'/serologi/code='.$qrcode;
+                                            $url = 'https://sumber-medika.web.id/surat-laboratorium/'.$sl->id_serologi.'/serologi/code='.$qrcode;
                                         @endphp
                                         <img src="https://chart.googleapis.com/chart?cht=qr&chs=140x140&chl={{$url}}choe=UTF-8" class="mt-1">
                                     </td>

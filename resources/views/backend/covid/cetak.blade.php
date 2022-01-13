@@ -184,7 +184,7 @@
                                     @php
                                         $cv = \App\Model\Covid::where('id',$covid->id)->first();
                                         $qrcode = $cv->qrcode;
-                                        $url = 'https://sumber-medika.herokuapp.com/surat-keterangan/'.$cv->id.'/code='.$qrcode;
+                                        $url = 'https://sumber-medika.web.id/surat-keterangan/'.$cv->id.'/code='.$qrcode;
                                     @endphp
                                     <img src="https://chart.googleapis.com/chart?cht=qr&chs=140x140&chl={{$url}}choe=UTF-8" class="mt-1">
                                 </td>

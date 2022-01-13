@@ -214,7 +214,7 @@
                                         @php
                                             $dr = \App\Model\DarahRutin::where('id_darah_rutin',$dr->id_darah_rutin)->first();
                                             $qrcode = $dr->qrcode;
-                                            $url = 'https://sumber-medika.herokuapp.com/surat-laboratorium/'.$dr->id_darah_rutin.'/darah-rutin/code='.$qrcode;
+                                            $url = 'https://sumber-medika.web.id/surat-laboratorium/'.$dr->id_darah_rutin.'/darah-rutin/code='.$qrcode;
                                         @endphp
                                         <img src="https://chart.googleapis.com/chart?cht=qr&chs=140x140&chl={{$url}}choe=UTF-8" class="mt-1">
                                     </td>

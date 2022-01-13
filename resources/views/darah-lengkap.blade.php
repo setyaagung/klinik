@@ -282,7 +282,7 @@
                                         @php
                                             $dl = \App\Model\DarahLengkap::where('id_darah_lengkap',$dl->id_darah_lengkap)->first();
                                             $qrcode = $dl->qrcode;
-                                            $url = 'https://sumber-medika.herokuapp.com/surat-laboratorium/'.$dl->id_darah_lengkap.'/darah-lengkap/code='.$qrcode;
+                                            $url = 'https://sumber-medika.web.id/surat-laboratorium/'.$dl->id_darah_lengkap.'/darah-lengkap/code='.$qrcode;
                                         @endphp
                                         <img src="https://chart.googleapis.com/chart?cht=qr&chs=140x140&chl={{$url}}choe=UTF-8" class="mt-1">
                                     </td>

@@ -146,7 +146,7 @@
                                         @php
                                             $v = \App\Model\Vaksin::where('id_vaksin',$vaksin->id_vaksin)->first();
                                             $qrcode = $v->no_vaksin;
-                                            $url = 'https://sumber-medika.herokuapp.com/surat-vaksin/'.$v->id_vaksin.'/code='.$qrcode;
+                                            $url = 'https://sumber-medika.web.id/surat-vaksin/'.$v->id_vaksin.'/code='.$qrcode;
                                         @endphp
                                         <img src="https://chart.googleapis.com/chart?cht=qr&chs=140x140&chl={{$url}}choe=UTF-8" class="mt-1">
                                     </td>

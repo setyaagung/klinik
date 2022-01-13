@@ -184,7 +184,7 @@
                                         @php
                                             $kd = \App\Model\KimiaDarah::where('id_kimia_darah',$kd->id_kimia_darah)->first();
                                             $qrcode = $kd->qrcode;
-                                            $url = 'https://sumber-medika.herokuapp.com/surat-laboratorium/'.$kd->id_kimia_darah.'/kimia-darah/code='.$qrcode;
+                                            $url = 'https://sumber-medika.web.id/surat-laboratorium/'.$kd->id_kimia_darah.'/kimia-darah/code='.$qrcode;
                                         @endphp
                                         <img src="https://chart.googleapis.com/chart?cht=qr&chs=140x140&chl={{$url}}choe=UTF-8" class="mt-1">
                                     </td>

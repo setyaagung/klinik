@@ -220,7 +220,7 @@
                                         @php
                                             $ur = \App\Model\UrineRutin::where('id_urine_rutin',$ur->id_urine_rutin)->first();
                                             $qrcode = $ur->qrcode;
-                                            $url = 'https://sumber-medika.herokuapp.com/surat-laboratorium/'.$ur->id_urine_rutin.'/urine-rutin/code='.$qrcode;
+                                            $url = 'https://sumber-medika.web.id/surat-laboratorium/'.$ur->id_urine_rutin.'/urine-rutin/code='.$qrcode;
                                         @endphp
                                         <img src="https://chart.googleapis.com/chart?cht=qr&chs=140x140&chl={{$url}}choe=UTF-8" class="mt-1">
                                     </td>
